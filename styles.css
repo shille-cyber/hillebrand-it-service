@@ -287,10 +287,17 @@ section {
 }
 
 .region-list li {
-  padding: 14px 16px;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
   border-left: 3px solid var(--amber);
-  background: #eef2f0;
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
   font-weight: 800;
+  box-shadow: 0 8px 22px rgba(23, 32, 38, 0.05);
 }
 
 .process {
