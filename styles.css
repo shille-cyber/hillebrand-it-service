@@ -70,6 +70,7 @@ a {
 nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: clamp(14px, 3vw, 30px);
   color: var(--muted);
   font-size: 0.96rem;
@@ -258,9 +259,38 @@ section {
 }
 
 .service-card p,
-.steps p {
+.steps p,
+.region-content p {
   margin: 0;
   color: var(--muted);
+}
+
+.region {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+.region-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: start;
+}
+
+.region-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.region-list li {
+  padding: 14px 16px;
+  border-left: 3px solid var(--amber);
+  background: #eef2f0;
+  font-weight: 800;
 }
 
 .process {
@@ -365,6 +395,7 @@ footer p {
 
   .intro,
   .contact,
+  .region-content,
   .service-grid,
   .steps {
     grid-template-columns: 1fr;
@@ -379,6 +410,7 @@ footer p {
   nav {
     gap: 10px;
     font-size: 0.88rem;
+    justify-content: flex-start;
   }
 
   .hero {
@@ -404,6 +436,10 @@ footer p {
   }
 
   .trust-row {
+    grid-template-columns: 1fr;
+  }
+
+  .region-list {
     grid-template-columns: 1fr;
   }
 
